@@ -25,3 +25,63 @@
   Pushes a branch and sets it as the upstream branch.
 
 # How to get back to previous commit
+
+## 1. Go back to a previous commit (temporary)
+
+Use this when you only want to view or test an older version.
+
+after this you will see all the commits hash, then take 5-6 character from the hash
+
+```bash
+git log
+```
+
+```bash
+git checkout <commit-hash>
+```
+
+Check where you are:
+
+```bash
+git status
+# HEAD detached at <commit-hash>
+```
+
+---
+
+## 2. Return to the current (latest) state
+
+If you came from an old commit using `checkout`:
+
+```bash
+git checkout master
+```
+
+This brings you back to the latest commit on the branch.
+
+---
+
+## 3. Make a previous commit the new latest (remove newer commits)
+
+Use this when you want the project to end at an older commit.
+
+```bash
+git checkout master
+git reset --hard <previous-commit-hash>
+```
+
+If the newer commits were already pushed:
+
+```bash
+git push --force
+```
+
+---
+
+## 4. Remove all commits before a certain commit
+
+Keeps only commits after the specified point.
+
+```bash
+git reset --hard <commit-after-the-one-you-want-to-remove>
+```
