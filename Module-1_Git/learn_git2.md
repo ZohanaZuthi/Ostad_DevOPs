@@ -27,3 +27,9 @@ git stash list
 ```bash
 git stash apply
 ```
+
+**Correct**
+
+```bash
+git stash pop "stash@{1}"
+```
