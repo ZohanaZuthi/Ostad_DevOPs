@@ -125,3 +125,15 @@ git reset --hard HEAD~1
 ```
 
 ---
+
+````md
+# Git Amend
+
+```bash
+git commit --amend
+```
+````
+
+- Edits the last commit
+- Change commit message or add files
+- No new commit is created
