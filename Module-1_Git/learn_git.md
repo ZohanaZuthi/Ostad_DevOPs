@@ -85,3 +85,43 @@ Keeps only commits after the specified point.
 ```bash
 git reset --hard <commit-after-the-one-you-want-to-remove>
 ```
+
+````md
+# Git Reset
+
+## Soft Reset
+
+```bash
+git reset --soft <commit>
+```
+````
+
+- Moves HEAD
+- Keeps changes staged
+- Use to redo a commit
+
+Example:
+
+```bash
+git reset --soft HEAD~1
+```
+
+---
+
+## Hard Reset
+
+```bash
+git reset --hard <commit>
+```
+
+- Moves HEAD
+- Deletes all changes
+- Use to discard commits
+
+Example:
+
+```bash
+git reset --hard HEAD~1
+```
+
+---
