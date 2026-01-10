@@ -75,3 +75,28 @@ git commit
 ```
 
 ---
+
+## Deleting a Git Branch
+
+### Delete a local branch
+
+```bash
+git branch -d branch-name
+```
+
+- Deletes the branch **after it’s merged**
+- Safe option
+
+Force delete (not merged):
+
+```bash
+git branch -D branch-name
+```
+
+---
+
+### Delete a remote branch
+
+```bash
+git push origin --delete branch-name
+```
